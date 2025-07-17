@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include android:id="@id/toolbar" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" layout="@layout/toolbar" />
+    <EditText android:textSize="@dimen/add_comment_text_size" android:textColor="@color/slate_grey_100" android:gravity="top" android:id="@id/commentsText" android:background="@android:color/transparent" android:layout_width="@dimen/zero_dp" android:layout_height="@dimen/zero_dp" android:layout_margin="@dimen/default_margin_size" android:hint="@string/share_your_experience_with_us" android:inputType="textLongMessage|textMultiLine" android:fontFamily="@font/rubik_regular" android:autofillHints="@string/comment" app:layout_constraintBottom_toTopOf="@id/saveButton" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/toolbar">
+        <requestFocus />
+    </EditText>
+    <Button android:enabled="false" android:id="@id/saveButton" android:layout_width="@dimen/zero_dp" android:text="@string/action_save" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" style="@style/BigRoundButtonStyle" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include android:id="@id/toolbar" android:layout_width="0.0dip" android:layout_height="wrap_content" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" layout="@layout/toolbar" />
+    <ViewFlipper android:id="@id/viewFlipper" android:layout_width="0.0dip" android:layout_height="0.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/toolbar">
+        <com.walmart.sparkdriver.features.home.SomethingWentWrongView android:id="@id/somethingWentWrongLayout" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_30dp" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+        <include android:id="@id/reasonCodeListViewContainer" layout="@layout/view_delete_reason_codes" />
+        <include android:id="@id/sendVerificationViewContainer" layout="@layout/view_delete_account_send_email_verification" />
+        <include android:id="@id/enterVerificationViewContainer" layout="@layout/view_delete_account_acknowledge_verification_code" />
+    </ViewFlipper>
+    <include android:id="@id/loadingProgressBar" android:visibility="gone" android:layout_width="@dimen/zero_dp" android:layout_height="@dimen/zero_dp" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" layout="@layout/loading_progress_bar" />
+</androidx.constraintlayout.widget.ConstraintLayout>
